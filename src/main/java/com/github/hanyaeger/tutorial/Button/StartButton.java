@@ -1,25 +1,17 @@
 package com.github.hanyaeger.tutorial.Button;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.entities.impl.TextEntity;
-import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
-import com.github.hanyaeger.api.userinput.MouseEnterListener;
-import com.github.hanyaeger.api.userinput.MouseExitListener;
 import com.github.hanyaeger.tutorial.JumpPrince;
 import javafx.scene.Cursor;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 
-public class StartButton extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
+public class StartButton extends Button {
     JumpPrince jumpPrince;
 
     public StartButton(Coordinate2D initialLocation, JumpPrince jumpPrince){
-        super(initialLocation,"Play game");
+        super(initialLocation,jumpPrince,Color.PURPLE,"Play Game");
         this.jumpPrince = jumpPrince;
-        setFill(Color.PURPLE);
-        setFont(Font.font("Roboto", FontWeight.BOLD, 30));
     }
 
     @Override

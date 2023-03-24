@@ -10,12 +10,12 @@ import com.github.hanyaeger.tutorial.entities.text.HealthText;
 import com.github.hanyaeger.tutorial.entities.text.SpeedMeter;
 
 public class BottomFloor extends DynamicScene implements TileMapContainer {
-    JumpPrince jumpPrince;
+    private JumpPrince jumpPrince;
 
-    HealthText healthText;
-    SpeedMeter speedMeter;
-    CoinText coinText;
-    Prince prince;
+    private HealthText healthText;
+    private SpeedMeter speedMeter;
+    private CoinText coinText;
+    private Prince prince;
 
     public BottomFloor(JumpPrince jumpPrince, HealthText healthText, SpeedMeter speedMeter, CoinText coinText, Prince prince){
         this.jumpPrince = jumpPrince;

@@ -10,12 +10,12 @@ import com.github.hanyaeger.tutorial.entities.text.HealthText;
 import com.github.hanyaeger.tutorial.entities.text.SpeedMeter;
 
 public class Level2 extends DynamicScene implements TileMapContainer {
-    JumpPrince jumpPrince;
+    private JumpPrince jumpPrince;
 
-    HealthText healthText;
-    SpeedMeter speedMeter;
-    CoinText coinText;
-    Prince prince;
+    private HealthText healthText;
+    private SpeedMeter speedMeter;
+    private CoinText coinText;
+    private Prince prince;
 
     public Level2(JumpPrince jumpPrince, HealthText healthText, SpeedMeter speedMeter, CoinText coinText, Prince prince){
         this.jumpPrince = jumpPrince;

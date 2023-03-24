@@ -28,8 +28,9 @@ public class Prince extends DynamicSpriteEntity implements KeyListener, SceneBor
     private int health = 10;
     private int coins = 0;
     private Coordinate2D mousePosition;
-    public SpeedMeter speedMeter;
-    public int speed = 0;
+    private SpeedMeter speedMeter;
+    private int speed = 0;
+    private int current_active_scene = 1;
 
     public Prince(Coordinate2D location, HealthText healthText, JumpPrince jumpPrince, SpeedMeter speedMeter, CoinText coinText){
         super("sprites/King.png", location, new Size(40,80));
@@ -131,7 +132,9 @@ public class Prince extends DynamicSpriteEntity implements KeyListener, SceneBor
             coinText.setCoinText(coins);
             ((CoinItem) collidingObject).remove();
         } else if(collidingObject instanceof Flag) {
-
+            this.current_active_scene += 1;
+            setAnchorLocation(new Coordinate2D(380, 960));
+            jumpPrince.setActiveScene(current_active_scene);
         }
     }
 }

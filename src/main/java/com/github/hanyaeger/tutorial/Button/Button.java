@@ -12,31 +12,25 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class Level2Button extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
+public abstract class Button extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
+
     JumpPrince jumpPrince;
 
-    public Level2Button(Coordinate2D initialLocation, JumpPrince jumpPrince){
-        super(initialLocation,"level2");
+    public Button(Coordinate2D initialLocation, JumpPrince jumpPrince, Color color, String text){
+        super(initialLocation,text);
         this.jumpPrince = jumpPrince;
-        setFill(Color.PURPLE);
+        setFill(color);
         setFont(Font.font("Roboto", FontWeight.BOLD, 30));
     }
 
+    /*
     @Override
-    public void onMouseButtonPressed(MouseButton button, Coordinate2D coordinate2D){
-        jumpPrince.setActiveScene(2);
-    }
+    public abstract void onMouseButtonPressed(MouseButton button, Coordinate2D coordinate2D);
 
     @Override
-    public void onMouseEntered(){
-        setFill(Color.VIOLET);
-        setCursor(Cursor.HAND);
-    }
+    public abstract void onMouseEntered();
 
     @Override
-    public void onMouseExited(){
-        setFill(Color.PURPLE);
-        setCursor(Cursor.DEFAULT);
-    }
-
+    public abstract void onMouseExited();
+     */
 }
