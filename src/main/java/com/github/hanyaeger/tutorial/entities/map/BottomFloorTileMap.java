@@ -1,9 +1,10 @@
 package com.github.hanyaeger.tutorial.entities.map;
 
 import com.github.hanyaeger.api.scenes.TileMap;
-import com.github.hanyaeger.tutorial.entities.map.CoinItem.Coin;
-import com.github.hanyaeger.tutorial.entities.map.CoinItem.CoinBag;
-import com.github.hanyaeger.tutorial.entities.map.CoinItem.CoinChest;
+import com.github.hanyaeger.tutorial.entities.map.Interactable.*;
+import com.github.hanyaeger.tutorial.entities.map.Interactable.Items.Coin;
+import com.github.hanyaeger.tutorial.entities.map.Interactable.Items.CoinBag;
+import com.github.hanyaeger.tutorial.entities.map.Interactable.Items.CoinChest;
 
 public class BottomFloorTileMap extends TileMap {
 

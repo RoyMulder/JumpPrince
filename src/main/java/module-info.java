@@ -12,5 +12,6 @@ module JumpKing {
     exports com.github.hanyaeger.tutorial.entities.map;
     exports com.github.hanyaeger.tutorial.Scenes;
     exports com.github.hanyaeger.tutorial.Button;
-    exports com.github.hanyaeger.tutorial.entities.map.CoinItem;
+    exports com.github.hanyaeger.tutorial.entities.map.Interactable;
+    exports com.github.hanyaeger.tutorial.entities.map.Interactable.Items;
 }
